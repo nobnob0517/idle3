@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
 
   def index
-    @project = Project.includes(:user).page(params[:page]).per(5).order("created_at DESC")
+    @projects = Project.all
   end
 
   def new
@@ -16,16 +16,17 @@ class ProjectsController < ApplicationController
     if project.user_id == current_user.id
       project.destroy
   end
+  end
 
   def edit
   end
 
+
   def update
   end
 
-  def show
-    @project = Project.find(params[:id])
-  end
 
-end
+  def show
+    @project = Project.find(1)
+  end
 end
