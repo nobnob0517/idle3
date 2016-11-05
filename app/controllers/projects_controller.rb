@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
 
   def index
-      @projects = Project.includes(:user).page(params[:page]).per(5).order("created_at DESC")
+    @projects = Project.all
   end
 
   def new

@@ -1,5 +1,23 @@
 <div class="contents row" >
-  <% @projects.each do | project | %>
-    <p><%= projects.image %></p>
-  <% end %>
+  <% @projects.each do |project| %>
+    <li class="col">
+      <a href="/projects/<%= @projects.id %>"><div class="thumbnail__figure" style="background-image:url(<%= @projects.image %>)"></div></a>
+      <div class="thumbnail__caption">
+      <h3 class="text-xsmall text-overflow" title="<%= product.title %>">
+        <%= @projects.explain %>
+        </h3>
+<!--         <p class="text-small">
+          <% if product.reviews.present? %>
+          <span class="rating-star">
+            <i class="star-actived rate-<%= product.review_average %>0"></i>
+            </span>
+            <% else %>
+            <span class="rating-star">
+            <i class="star-actived rate-0"></i>
+              </span>
+              <% end %>
+            </p> -->
+          </div>
+        </li>
+        <% end %>
 </div>
