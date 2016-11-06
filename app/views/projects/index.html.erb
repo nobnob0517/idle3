@@ -1,29 +1,70 @@
-    <div id="main_cnt_wrapper">
-    <div id="yjContentsBody">
-      <div class="yjContainer">
-        <span class="yjGuid"><a id="yjContentsStart" name="yjContentsStart"></a><img alt="ここから本文です" height="1" src="http://i.yimg.jp/yui/jp/tmpl/1.1.0/audionav.gif" width="1"></span>
-        <div id="yjMain">
-          <article class="section">
-            <div class="container">
-              <header class="header header--section">
-                <h2 class="text-middle">
-                  <i class="icon-movie color-gray-light"></i>新着作品
-                </h2>
-              </header>
-              <ul class="thumbnails thumbnail--movies row grid4 js-lazy-load-images js-my-check-stats" id="list-module">
-                <% @projects.each do |project| %>
-                <li class="col">
-                  <a href="/projects/<%= project.id %>">
-                  <div class="thumbnail__figure" style="background-image:url(<%= project.image %>)"></div></a>
-                  <div class="thumbnail__caption">
-                    <h3 class="text-xsmall text-overflow" title="<%= project.explain %>">
-                      <%= @projects.explain %>
-                    </h3>
+<div class= "space" >
+  <div class="order-space-left col-xs-3 tile-box clearfix" >
+  <a href="/spaces/detail/3823" target="_blank">
+  <img alt="space image" src="//d2pd5ncxl8pnk2.cloudfront.net/space/subs/0/3823/t/S_54aaa63c612ec.jpg">
+                    </a>
+                    <div class="order-space-center col-xs-6 tile-box clearfix">
+                    <div class="category" style="display:none;">
+                      <span>195 m</span>
+                    </div>
+                    <div class="order-space-info">
+                      <div class="addr"><i class="icon-icon_nokisaki-37"></i>東京都渋谷区渋谷</div>
+                      <p>渋谷青山G-style</p>
+                    </div>
+                    <a class="title" href="/spaces/detail/3823" target="_blank">渋谷青山G-style 2階</a>
+                    <div class="order-item">
+                      <div class="second col-xs-12 sm-zeropad">
+                        <span class="active">
+                          <i class="icon-icon_nokisaki-03"></i>
+                          販売可
+                        </span>
+                        <span>
+                          <i class="icon-icon_nokisaki-05"></i>
+                          車出店可
+                        </span>
+                        <span class="active">
+                          <i class="icon-icon_nokisaki-01"></i>
+                          PR可
+                        </span>
+                        <span class="active">
+                          <i class="icon-icon_nokisaki-10"></i>
+                          教室/セミナー可
+                        </span>
+                        <div class="clear"></div>
+                        <span class="active">
+                          <i class="icon-icon_nokisaki-04"></i>
+                          撮影可
+                        </span>
+                        <span>
+                          <i class="icon-icon_nokisaki-11"></i>
+                          防音
+                        </span>
+                        <span>
+                          <i class="icon-icon_nokisaki-02"></i>
+                          鏡あり
+                        </span>
+                      </div>
+                    </div>
+                    <div class="order-item last" style="display:none;">
+                      <i class="icon-icon_nokisaki-41"></i>
+                      <span>
+                        タグ
+                      </span>
+                      <ul class="tagcloud">
+                                                <li>
+                          <a href="/search?tag=%E5%B1%8B%E5%86%85">屋内</a>
+                        </li>
+                                                <li>
+                          <a href="/search?tag=%E6%9C%BA%E3%83%BB%E6%A4%85%E5%AD%90%E8%B2%B8%E5%87%BA%E3%81%97%E3%81%82%E3%82%8A">机・椅子貸出しあり</a>
+                        </li>
+                                                <li>
+                          <a href="/search?tag=%E5%9C%B0%E4%B8%8B%E3%80%812%E9%9A%8E%E4%BB%A5%E4%B8%8A">地下、2階以上</a>
+                        </li>
+                                              </ul>
+                    </div>
+
+          
                   </div>
-                </li>
-                <% end %>
-              </ul>
-            </div>
-          </article>
-        </div>
-        <div id="yjSub">
+  <% @projects.each do |project| %>
+  <% end %>
+</div>
