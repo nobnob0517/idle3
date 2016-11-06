@@ -22,6 +22,15 @@ Rails.application.configure do
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
 
+
+  config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.assets.js_compressor = :uglifier
+  config.assets.compile = true
+  config.log_level = :debug
+  config.i18n.fallbacks = true
+  config.active_support.deprecation = :notify
+  config.log_formatter = ::Logger::Formatter.new
+  config.active_record.dump_schema_after_migration = false
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
