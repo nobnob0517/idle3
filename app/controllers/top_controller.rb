@@ -1,8 +1,8 @@
 class TopController < ApplicationController
 
-  def index
-    @q        = Project.search(params[:q])
-    @projects = @q.result(distinct: true)
-  end
+def index
+    @q_projects = Project.search(params[:q])
+    @projects = @q_projects.result(distinct: true)
+end
 
 end

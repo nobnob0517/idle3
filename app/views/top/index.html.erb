@@ -1,7 +1,7 @@
 <h1>空きスペースを検索</h1>
 
 <%# form_for の代わりに search_form_for を使うことで検索フォームを作成 %>
-<%= search_form_for @q do |f| %>
+<%= search_form_for @q_projects do |f| %>
 
   <%# start 特定の文字列で始まる商品名で検索 %>
   <%= f.label :title_start, "スペース名" %>
@@ -14,7 +14,7 @@
   <br />
 
   <%# 関連の名前で検索 Product.carrier.name %>
-  <%= f.label :adress_cont, "住所" %>
+  <%= f.label :adress_cont, "所在" %>
   <%= f.search_field :adress_cont %>
   <br />
 
@@ -28,10 +28,8 @@
   <%= f.search_field :title_or_explain_cont %>
   <br />
 
-  <%# 検索ボタン %>
   <%= f.submit %>
 <% end %>
-
 <hr />
 
 <table>
