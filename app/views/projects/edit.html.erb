@@ -1,0 +1,24 @@
+ <div class="contents row">
+  <div class="container">
+    <%= form_tag('/projects/#{@project.id}', method: :get) do %>
+      <h3>
+        空きスペースを編集する
+      </h3>
+      <input cols="100" placeholder="image URL" type="blob" name="image">
+       <br />
+
+      <textarea cols="50" name="title" placeholder="title" rows="1"></textarea>
+       <br />
+
+      <textarea cols="50" name="price" placeholder="price/day" rows="1"></textarea>
+       <br />
+
+      <textarea cols="50" name="adress" placeholder="adress" rows="10"></textarea>
+       <br />
+
+      <textarea cols="100" name="explain" placeholder="explain" rows="20"></textarea>
+       <br />
+
+      <input type="submit" value="登録">
+    <% end %>
+  </div>

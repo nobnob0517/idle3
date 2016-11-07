@@ -4,12 +4,22 @@
       <h3>
         空きスペースを登録する
       </h3>
-      <input placeholder="image" type="text" name="image">
-      <textarea cols="30" name="title" placeholder="title" rows="10"></textarea>
-      <textarea cols="30" name="price" placeholder="price" rows="10"></textarea>
-      <textarea cols="30" name="adress" placeholder="adress" rows="10"></textarea>
-      <textarea cols="30" name="explain" placeholder="explain" rows="10"></textarea>
-      <input type="submit" value="SENT">
+      <input cols="100" placeholder="image URL" type="blob" name="image">
+       <br />
+
+      <textarea cols="50" name="title" placeholder="title" rows="1"></textarea>
+       <br />
+
+      <textarea cols="50" name="price" placeholder="price/day" rows="1"></textarea>
+       <br />
+
+      <textarea cols="50" name="adress" placeholder="adress" rows="10"></textarea>
+       <br />
+
+      <textarea cols="100" name="explain" placeholder="explain" rows="20"></textarea>
+       <br />
+
+      <input type="submit" value="登録">
     <% end %>
   </div>
 </div>

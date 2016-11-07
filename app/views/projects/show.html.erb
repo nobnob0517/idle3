@@ -1,8 +1,5 @@
-  <div class="contents row" >
-      <div class="content_post" style="background-image: url(<%= @project.image %>);">
+      <div class="main_image" style="background-image: url(<%= @project.image %>);">
     <% if user_signed_in? && current_user.id == @project.user_id %>
-        <div class="more">
-          <span><%= image_tag 'arrow_top.png' %></span>
         <ul class="more_list">
           <li>
             <%= link_to '編集', "/projects/#{@project.id}/edit", method: :get %>
@@ -13,5 +10,16 @@
       </ul>
     </div>
         <% end %>
-    <p><%= @project.price %></p>
-  </div>
+
+
+
+          <a href="/projects/<%= @project.id %>">
+            <img src="(<%= @project.image %>)"></img>
+          </a>
+          <div class="item-detail__subinfo">
+            <p><%= @project.adress %></p>
+          <a class="item-detail__title"><%= @project.title %></a>
+            <span>説明</span>
+            <span class="val"><%= @project.explain %></span>
+            <span>1日あたり</span>
+            <span class="val"><%= @project.price %>円</span>
