@@ -2,34 +2,24 @@
       <% @projects.each do |project| %>
       <div class="item">
         <div class="item-image">
-          <a href="<!--物件のリンク先-->">
+          <a href="/projects/<%= project.id %>">
             <img src="(<%= project.image %>)"></img>
           </a>
         </div>
         <div class="item-detail">
           <div class="item-detail__subinfo">
-            <span>例：東京都渋谷区渋谷</span>
-            <p>例：渋谷青山G-style</p>
+            <p><%= project.adress %></p>
           </div>
-          <a class="item-detail__title"><%= project.price %></a>
+          <a class="item-detail__title"><%= project.title %></a>
           <div class="item-detail__available">
-            <span>販売可</span>
-            <span>車出店可</span>
-            <span> PR可 </span>
-            <span>教室/セミナー可</span>
-            <span>撮影可 </span>
-            <span>防音</span>
-            <span>鏡あり</span>
           </div>
         </div>
         <div class="item-estimate">
           <div class="item-estimate__tile">
-            <span>タイプ</span>
-            <span class="val">屋内</span>
-            <span>広さ</span>
-            <span class="val">29.16㎡</span>
+            <span>説明</span>
+            <span class="val"><%= project.explain %></span></span>
             <span>1日あたり</span>
-            <span class="val"><%= project.price %></span>
+            <span class="val"><%= project.price %>円</span>
           </div>
         </div>
       </div>
