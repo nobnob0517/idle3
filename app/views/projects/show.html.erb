@@ -1,3 +1,7 @@
+          <div class="item-detail__subinfo">
+            <p><%= @project.adress %></p>
+          </div>
+          <a class="item-detail__title"><%= @project.title %></a>
       <div class="main_image" style="background-image: url(<%= @project.image %>);">
     <% if user_signed_in? && current_user.id == @project.user_id %>
         <ul class="more_list">
@@ -11,15 +15,14 @@
     </div>
         <% end %>
 
-
-
-          <a href="/projects/<%= @project.id %>">
-            <img src="(<%= @project.image %>)"></img>
-          </a>
-          <div class="item-detail__subinfo">
-            <p><%= @project.adress %></p>
-          <a class="item-detail__title"><%= @project.title %></a>
-            <span>説明</span>
-            <span class="val"><%= @project.explain %></span>
+            <br />
+            <br />
             <span>1日あたり</span>
             <span class="val"><%= @project.price %>円</span>
+            <br />
+            <br />
+            <span>説明</span>
+            <span class="val"><%= @project.explain %></span>
+            <br />
+            <br />
+            <br />
